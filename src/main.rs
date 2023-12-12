@@ -4,7 +4,7 @@ struct User{
     email:String,
     sign_in_count:u64,
 }
-
+#[derive(Debug)]
 struct Rectangle{
     width:u32,
     height:u32,
@@ -39,6 +39,7 @@ fn main(){
     };
 
     println!("The Area of Rectangle is {} sq. pixels",area(&rect1));
+    println!("The Rect1 is {:#?}",rect1);
 }
 
 
