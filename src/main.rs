@@ -10,6 +10,13 @@ struct Rectangle {
     height: u32,
 }
 
+// Method Syntax Impl
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
 fn main() {
     // Creating Instance of Struct
     let mut user1 = User {
@@ -53,6 +60,10 @@ fn main() {
     };
 
     dbg!(&rect2);
+
+    // Method Syntax Usage
+    println!("\n");
+    println!("The area of the rectangle is {} sq pixels", rect1.area());
 }
 
 // Field Init Shorthand used here
