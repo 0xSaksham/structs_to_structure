@@ -17,6 +17,15 @@ impl Rectangle {
     }
 }
 
+impl Rectangle{
+    fn square(size:u32)-> Self{
+        Self{
+            width:size,
+            height:size,
+        }
+    }
+}
+
 fn main() {
     // Creating Instance of Struct
     let mut user1 = User {
@@ -64,6 +73,11 @@ fn main() {
     // Method Syntax Usage
     println!("\n");
     println!("The area of the rectangle is {} sq pixels", rect1.area());
+
+    // Associated Functions
+    println!("\n");
+    let sq = Rectangle::square(5);
+    println!("The Area of Square is {}", sq.area());
 }
 
 // Field Init Shorthand used here
